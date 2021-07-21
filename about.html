@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latiful Kamal</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="about.html">
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <!--medsos-->
+    <div class="medsos">
+        <div class="container">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <header>
+        <div class="container">
+            <h1 class="ml1">
+                LATIFUL KAMAL
+            </h1>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li class="active"><a href="about.html">ABOUT</a></li>
+                <li><a href="sevice.html">SKILLS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="portofolio.html">PROYEK</a></li>
+
+
+            </ul>
+        </div>
+    </header>
+    <!--LABEL-->
+    <section class="label">
+        <div class="container">
+            <p>Home / About</p>
+        </div>
+    </section>
+
+    <!--ABOUT-->
+    <section class="about">
+        <!-- <img src="img/kamal2.jpg" width="100%" height="400px" > -->
+        <h3>ABOUT</h3>
+        <p> Nama saya adalah Latiful Kamal, saya lahir di Banyuwangi,
+            20 februari 2000. Saya adalah anak kedua dari dua bersaudara.
+            Saya adalah Mahasiswa
+            Politeknik Negeri Banyuwangi semester 4, Saya
+            mengambil program study Teknik Informatika.
+            Adapun matakuliah yang di ajarkan di Teknik Informatika Politeknik Negeri banyuwangi
+            adalah Pemrograman, Jaringan, Database dan
+            Server
+        </p>
+        <br>
+
+        <h3>PENGALAMAN ORGANISASI</h3>
+        <p>Koordinator divisi Badminton UKM Olahraga</p>
+        <br>
+        <p>Ketua Umum UKM Olahraga</p>
+
+        <h3>PENDIDIKAN</h3>
+        <P> MI Syaiful Wathon</P>
+        <br>
+        <P> SMP Mukhtar Syafaat</P>
+        <br>
+        <P> MAN 2 Banyuwangi</P>
+        <br>
+        <P> Politeknik Negeri Banyuwangi</P>
+
+        <h3>VISI</h3>
+        <p>Menjadi pribadi yang bertakwa kepada Allah, berakhlak mulia,
+            mendapatkan kesuksesan di dunia dan di akhirat, selalu membahagiakan orang tua,
+            percaya diri, dapat dipercaya dan bermanfaat bagi orang lain</p>
+        <h3>MISI</h3>
+        <p> Saya bertawakkal kepada Allah, beribadah dengan ikhlas kepadaNya, menaati segala perintahNya,
+            mengikuti Sunnah-sunnah rasul dan selalu patuh kepada kedua orang tua,
+            Saya ingin mengasah pengetahuan dan kemampuan saya setiap hari selama dikelas,
+            Saya akan mencari perkerjaan setelah saya lulus dan mendapat gelar sarjana.
+            Saya akan dihormati dan di akui oleh pemimpin saya dengan cara selalu menjaga kejujuran dan
+            membantu memecahkan masalah-masalah yang ada
+            Saya akan berinovasi, berkreatifitas dan bekerja keras, dengan kemampuan yang saya miliki
+            sehingga karir saya tetap berjalan dan bisa ke tingkat yang lebih baik</p>
+
+    </section>
+
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <small>Copyriht &copy; 2020 - Latifulkamal. All Right Reserved</small>
+        </div>
+    </footer>
+    <script>
+        // Wrap every letter in a span
+        var textWrapper = document.querySelector('.ml1 .letters');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({
+            loop: true
+        })
+            .add({
+                targets: '.ml1 .letter',
+                scale: [0.3, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 600,
+                delay: (el, i) => 70 * (i + 1)
+            }).add({
+                targets: '.ml1 .line',
+                scaleX: [0, 1],
+                opacity: [0.5, 1],
+                easing: "easeOutExpo",
+                duration: 700,
+                offset: '-=875',
+                delay: (el, i, l) => 80 * (l - i)
+            }).add({
+                targets: '.ml1',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+    </script>
+
+
+</body>
+
+</html>
